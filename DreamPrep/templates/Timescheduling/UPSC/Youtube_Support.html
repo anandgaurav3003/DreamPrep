@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube Support</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e9a961e9a6.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <style>
+        
+/* CSS Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url('/static/Maingif.gif');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* Navigation Bar Styling */
+nav {
+    background-color: #000000; /* Background color of the nav bar */
+    padding: 10px 0; /* Space around the items in the nav */
+}
+ 
+nav .main {
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Center items vertically */
+    justify-content: space-between; /* Space between logo and menu */
+    max-width: 1200px; /* Optional: Limit the width */
+    margin: 0 auto; /* Center the nav container */
+    padding: 0 20px; /* Padding inside the nav */
+}
+
+#Logo {
+    justify-content: left;
+            border-color: blue;
+            width: 100px;
+            height: 75px;
+            border: none;
+    
+}
+
+#image{
+    margin-left: 600px;
+    display: flex;
+}
+
+nav ul {
+    list-style: none; /* Remove default bullet points */
+    display: flex; /* Align list items horizontally */
+    gap: 20px; /* Space between each item */
+}
+
+nav ul li a {
+    color: white; /* Text color */
+    text-decoration: none; /* Remove underline */
+    padding: 10px 20px; /* Add space inside the links */
+    border-radius: 5px; /* Optional: Rounds the corners */
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+}
+
+nav ul li a:hover {
+    background-color: #555; /* Background color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav .main {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    nav ul {
+        flex-direction: column; /* Stack menu items vertically */
+        width: 100%; /* Full width of the nav */
+    }
+
+    nav ul li a {
+        width: 100%; /* Full width of each menu item */
+        text-align: left; /* Align text to the left */
+        padding: 10px; /* Adjust padding */
+    }
+}
+
+#Introduction{
+    padding: 150px 10px 130px 50px;
+    background-image: url('/static/UPSCbg.jpg');
+    background-size: 76%;
+    background-color: #555;
+   
+    background-position: right center;
+}
+#Introduction h2{
+    font-size: 40px;
+    color: red;
+    font-weight: bold;
+}
+#Introduction p{
+    font-size: 25px;
+    color: white;
+  
+}
+#Introduction a{
+    color: yellow;
+    text-decoration: none;
+}
+#Main_Calculation{
+    margin-top: -10px;
+    
+}
+
+#card-1 {
+
+ width: 310px;
+ margin-left: 80px;
+ margin-right: 10px;
+ text-align: center;
+ height: 100px;
+ background-color: #401364;
+ padding: 30px;
+ border-radius: 12px;
+ color: white ; 
+ 
+
+ }
+
+.card{
+    flex-wrap: wrap;
+    gap: 1.8vmin;
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Center items vertically */
+}
+#card-1:hover{
+    background-color:  #6e08c2;
+    opacity: 8ms;
+    transition-delay: 4ms;
+}
+
+.card h2{
+    text-align: center;
+}
+.card #card-1 a{
+    text-decoration: none;
+    color: white;
+}
+hr{
+    height: 5px;
+    background-color: #0c0c0c;
+    margin: 0px 20px 0px 20px;
+}
+
+#History , #Geography, #Economics, #Indian_Polity, #International_Relations_and_Affairs {
+    margin: 0px 0px 10px 60px;
+}
+#History h2 ,#Geography h2,#Indian_Polity  h2,
+#Economics  h2 ,  
+#International_Relations_and_Affairs  h2{
+      margin: 10px 0px 10px 60px;
+      font-size: 30px;
+      color: #766fde;    
+}
+
+#History p , #History p ,#Geography p,#Indian_Polity  p,
+#Economics  p ,  
+#International_Relations_and_Affairs p {
+    margin: 0px 20px 10px 60px;
+    color: white;
+    font-size: 18px;
+}
+.intro{
+    height: fit-content;
+    width: fit-content;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #0000005d;
+}
+
+
+#Advantage{
+    padding: 60px 0px 60px 0px;
+    background-color: #1c0c0c;
+    color: white;
+    text-align: center;
+    margin-top: -9.8px;
+}
+#Advantage a{
+    font-size: 18px;
+    text-decoration: none;
+}
+#Advantage #Ad{
+    display: flex;
+    margin: 0px 0px 0px 120px;
+    gap: 1.9vmin;
+}
+#Advantage #Ad h2{
+    color: #766fde;
+}
+#Advantage #Ad p{
+    font-size: large;
+}
+
+footer #Tools_and_link{
+    display: flex;
+    gap: 9vmin;
+    padding: 60px 0px 60px 0px;
+    h2{
+        color: #766fde;
+    }
+    ul li{
+        list-style-type: none;
+    }
+    a{
+        color:white;
+        text-decoration: none;
+    }
+    a:hover{
+        text-decoration: underline;
+        color: blue;
+    }
+   
+}
+footer{
+    background-color: black;
+}
+footer #Tools_and_link #tools {
+    margin: 0px 0px 0px 120px;
+   
+}
+#details{
+    padding: 30px 0px 40px 40px;
+    color: rgba(207, 207, 207, 0.831);
+    a{
+        text-decoration: none;
+        color: whitesmoke;
+    }
+    a:hover{
+        color: rgb(14, 93, 205);
+    }
+}
+#Icon{
+    font-size: 60px;
+}
+ 
+    </style>
+    <nav>
+        <div class="main">
+        <img src="/static/logo-removebg-preview.png" alt="" id="Logo">
+        <ul>
+            <li><a href="#History"> History </a></li>
+            <li><a href="#Geography"> Geography </a></li>
+            <li><a href="#Economics ">Economics </a></li>
+            <li><a href="#Indian_Polity "> Indian Polity </a></li>
+            <li><a href="#Art_and_Culture"> Art and culture </a></li>
+            <li><a href="#International_Relations_and_Affairs"> International_Relations_and_Affairs</a></li>
+        </ul>
+       </div>
+    </nav>
+
+   
+    <section id="Introduction">
+        <div class="intro">
+        <h2>Free YouTube Support</h2>
+        <br>
+        
+        <p>Welcome to "UPSC Master Support", your dedicated platform <br>for curated YouTube content, offering expert guidance and resources <br>   for UPSC preparation.
+            <br> Achieve success with tailored video tutorials, current affairs updates, and exam strategies! <b><i><a href="index.html"></a></i></b> <br>Simplify Your Tasks with Just One Page!</p>
+        </div>
+        </section>
+
+ <div id="Main_Calculation">
+    
+    <section id="History">
+    <h2>History</h2>
+    <p>The Whole History Content for UPSC prepration are available:</p>
+
+
+           <div class="card">
+                <div  id="card-1">  
+                    <a href=" https://youtu.be/ryhMEKz1KtI?si=_UXr8zWYQAlVqOly"> <h3>Ancient History </h3></a>
+                </div>
+                <div  id="card-1"> 
+                   <a href="https://www.youtube.com/live/lEv67p529UA?si=kIjsCmz8-bvFggz3"> Mediveal History <h3></h3></a>
+                </div>
+                <div  id="card-1"> 
+                   <a href=" https://youtu.be/R1G4FbyHdkw?si=WDkpdNU2q8V_4kAK"> <h3>Modern History</h3></a>
+                </div> 
+                <div  id="card-1"> 
+                    <a href="https://youtu.be/M6MCIj0WD2A?si=Lvaps9te9ijQcTsD"><h3>World History</h3></a>
+                </div>
+                
+           </div>
+    </section>
+<hr>
+    <section id="Geography">
+        <h2>Geography</h2>
+        <p>The Whole Geography Content for UPSC prepration are available:</p>
+           
+        <div class="card">
+                <div  id="card-1"> 
+                    <a href="https://www.youtube.com/live/J13mfSebhic?si=bY6GytKPJDyzHM5z"><h3>Physical Geography</h3></a>
+                </div>
+                <div  id="card-1"> 
+                    <a href="https://youtu.be/HDHCQOpPdrY?si=WlueFJoi8cF-zpQB"><h3>Human Geography</h3></a>
+                </div>
+                <div  id="card-1"> 
+                    <a href="https://www.youtube.com/watch?v=8czgjT_oibI&list=PL8eQ0Vwpe0H29e6SoN_uhdUL8k8zrxC8f"><h3> Geographical techniques</h3></a>
+                </div> 
+                <div  id="card-1"> 
+                    <a href="https://www.youtube.com/live/srtept1YJNw?si=TziTBw-Z77Z0lw-A"><h3>Environnmental Geography</h3></a>
+                </div>
+                <div  id="card-1"> 
+                    <a href="https://youtu.be/itMIyM4xg7E?si=HWINuMKAaujuJXvP"><h3>Regional Geography</h3></a>
+                </div>
+        </div>
+</section>
+<hr>
+ <section id="Indian_Polity">
+            <h2>Indian Polity</h2>
+            <p>The Whole Indian Polity Content for UPSC prepration are available:</p>
+            <div class="card">
+                <div  id="card-1"> 
+                    <a href="https://youtu.be/OwqXXkcK3uM?si=EnRwpetIwrv7r5Yy"><h3>M Laxmikant</h3></a>
+                </div>
+                <div  id="card-1"> 
+                    <a href="https://youtu.be/mTuh5fyojq0?si=u8KTowf70t5KSUnp"><h3> Rajesh Mishra </h3></a>
+                </div>
+                <div  id="card-1"> 
+                    <a href="https://youtu.be/gsXB5xhqd3w?si=8fAQ-V7LnibHNCwM"><h3> Khan Sir </h3></a>
+                </div> 
+           </div>
+</section>
+<hr>
+ <section id="Economics">
+
+            <h2>Economics</h2>
+            <p>The Whole Economics Content for UPSC prepration are available:</p>
+            <div class="card">
+                <div  id="card-1"> 
+                    <a href="https://youtu.be/T8tTUVk_fAE?si=5QyHoklBHRGqDq4I"><h3>Indian Economy by Ramesh singh</h3></a>
+                </div>
+                <div  id="card-1"> 
+                    <a href="https://youtu.be/haIUbZ4eOAs?si=9U029D_NT9dZIebs"><h3>Indian Economic Development</h3></a>
+                </div>
+           </div>
+
+</section>
+<hr>
+ <section id="International_Relations_and_Affairs">
+
+            <h2>International Relations and Affairs</h2>
+            <p>The Whole Economics Content for UPSC prepration are available:</p>
+            <div class="card">
+                <div  id="card-1"> 
+                    <a href="https://www.youtube.com/live/VE4GeM69Vec?si=S75pDJ012D2Q-OD6"><h3>  IR by Siddhart Singh   </h3></a>
+                </div>
+                <div  id="card-1"> 
+                    <a href="https://youtu.be/VBTvFTv7guc?si=zAuWCDhfasogEwFQ"><h3>IR by Physics Wallah</h3></a>
+                </div>
+                <div  id="card-1"> 
+                    <a href="https://youtu.be/quUfQRKYFCs?si=2SynxcwJYcDtMDuu"><h3> IR by Madhukar Kotawe</h3></a>
+                </div> 
+ </div>
+ 
+ </section>
+ </div>
+ 
+
+ <footer>
+    <div id="Tools_and_link">
+       <div id="tools">
+        <h2>Tools</h2>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Loan Calculator</a></li>
+            <li><a href="#">ROI Calculator</a></li>
+            <li><a href="#">Equation Solver</a></li>
+        </ul>
+       </div>
+    
+       <div id="tools">
+        <h2>Links</h2>
+        <ul>
+            <li><a href="index.html">Terms & Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Contact us</a></li>
+            
+        </ul>
+       </div>
+    </div>
+    <hr>
+    <div id="details">
+         <p>@2024 <a href="index.html">toolnxt.com</a>| All right reserved</p>
+    </div>
+ </footer>
+ </div>
+</body>
+</html>

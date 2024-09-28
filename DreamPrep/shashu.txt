@@ -1,0 +1,107 @@
+from flask import Flask, render_template, request, session, redirect, url_for
+from flask_sqlalchemy import SQLAlchemy
+app = Flask(__name__, static_url_path='/static')
+app.secret_key = 'Sattu_Shashu'
+
+app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql://Satvik:Sattuuu@localhost/dreamprep'
+
+mysql = SQLAlchemy(app)
+
+
+class Signup(mysql.Model):
+    id = mysql.Column(mysql.Integer, primary_key=True)
+    StudentName = mysql.Column(mysql.String(100))
+    Email = mysql.Column(mysql.String(100))
+    MobileNumber = mysql.Column(mysql.String(15))
+    DOB = mysql.Column(mysql.Date)
+    Password = mysql.Column(mysql.String(100))
+    ConfirmPassword = mysql.Column(mysql.String(100))
+
+
+
+
+
+
+def get_username():
+    if 'username' in session:
+        return session['username']
+    return None
+
+
+@app.route("/")
+def index():
+    return render_template("index.html")
+
+@app.route('/login')
+def login():
+    return render_template("login_page.html")
+
+@app.route('/Signup' ,  methods = ['GET','POST'])
+def signup():
+    if request.method == 'POST':
+        student_name = request.form['Sname']
+        email = request.form['email']
+        mobile_number = request.form['mobile_number']
+        dob = request.form['dob']
+        password = request.form['password']
+        confirm_password = request.form['confirm_password']
+
+        try:
+            new_user = Signup(StudentName=student_name, Email=email, MobileNumber=mobile_number, DOB=dob, Password=password, ConfirmPassword=confirm_password)
+            mysql.session.add(new_user)
+            mysql.session.commit()
+        except Exception as e:
+            print("Error executing SQL query:", e)
+
+        return redirect(url_for('login'))
+    else:
+        return render_template("Signup.html")
+
+
+@app.route('/dashboard' , methods = ['GET','POST'])
+def dashboard():
+    if request.method=='GET':
+        return render_template("dashboard.html")
+    if request.method == 'POST':
+        Username = request.form['username']
+        session['username'] = Username
+        return render_template("dashboard.html", name = Username)
+
+
+
+@app.route('/Timescheduling/UPSC' , methods = ['POST'])
+def Timesheduling():
+    if request.method == 'POST':
+        Courses = request.form['Courses']
+        Time = request.form['Time']
+        Username = get_username()
+
+        if Courses == "UPSC" and Time == "4 hour":
+            return render_template("/Timescheduling/UPSC/4-hour.html", name = Username)
+        elif Courses == "UPSC" and Time == "5 hour":
+            return render_template("/Timescheduling/UPSC/5-hour.html", name = Username)
+        elif Courses == "UPSC" and Time == "6 hour":
+            return render_template("/Timescheduling/UPSC/6-hour.html", name = Username)
+        elif Courses == "UPSC" and Time == "7 hour":
+            return render_template("/Timescheduling/UPSC/7-hour.html", name = Username)
+        elif Courses == "UPSC" and Time == "8 hour":
+            return render_template("/Timescheduling/UPSC/8-hour.html", name = Username)
+
+@app.route('/Notes')
+def Notes():
+    return render_template("/Timescheduling/UPSC/Notes.html")
+
+@app.route('/Mocktest')
+def Mocktest():
+    return render_template("/Timescheduling/UPSC/Mocktest.html")
+
+@app.route('/Syllabus')
+def Syllabus():
+    return render_template("./Syllabus.html")
+
+@app.route('/Criteria')
+def Criteria():
+    return render_template("/Criteria.html")
+
+if __name__ == '__main__':
+    app.run(debug=True)

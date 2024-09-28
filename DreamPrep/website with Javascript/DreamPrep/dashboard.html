@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://kit.fontawesome.com/e9a961e9a6.js" crossorigin="anonymous"></script>
+
+    <style>
+        *{
+            font-family: Arial, sans-serif;
+            margin: 0px;
+            padding: 0px;
+        }
+        body{
+          background-image: url(./yy.avif);
+        }
+        header {
+            background-color: rgb(8, 8, 8);
+            color: #fff;
+            justify-content: space-between;
+            display: flex;
+        }
+        nav {
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: space-between;
+        }
+       nav h1{
+        margin-left: 20px;
+        margin-top: 12px;
+        font-size: 22px;
+           font-family:'Times New Roman', Times, serif;
+       }
+       #dropdown-list{
+        font-size: 22px;
+        margin-right: 10px;
+       }
+        section {
+            padding: 10px;
+            text-align: left;
+        }
+        footer {
+            background-color: #3b0447;
+            color: #fff;
+            padding: 1px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        #logo{
+            justify-content: left;
+            border-color: blue;
+            width: 100px;
+            height: 75px;
+            border: none;
+
+        }
+
+        header h1{
+            margin-top: 15px;
+            margin-right: 45%;
+            font-family: "BhuTuka Expanded One", serif;
+            font-weight: 400;
+            font-style: normal;
+}
+
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  width: 90px;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  margin-left: 5%;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 20px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 6px ;
+  font-size: 19px;
+  text-decoration: none;
+  display: block;
+ 
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+h3{
+  margin-left: 40%;
+  margin-top: 2%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(202, 81, 162);
+}
+
+#Display{
+  margin-left: 0%;
+}
+
+#Submit{
+    display: flex;
+    justify-content: center;
+    margin-top: 2%;
+    border-radius: 10px;
+}
+button{
+    margin-left: 30px;
+    width: 120px;
+    height: 40px;
+    background-color: rgb(230, 176, 215);
+    border: none;
+    border-radius: 6px;
+    color: white;
+    font-size: 16px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+}
+button:hover{
+  background-color:rgb(230, 10, 167) ;
+  color: black;
+  transition:.6s;
+}
+#image{
+  display: flex;
+  justify-content: space-between;
+  margin: 0px 20px 0px 20px;
+}
+img{
+  width: 300px;
+  height: 180px;
+}
+#image h2{
+  border: 2px solid;
+  border-color: rgb(228, 169, 225);
+  text-align: center;
+  font-family: serif;
+  color: rgb(228, 169, 225);
+}
+.timesheduling{
+  display: block;
+}
+article{
+  color: white;
+}
+
+option{
+  height: 800px;
+}
+
+    </style>
+</head>
+<body>
+
+    <header>
+    <img src="Logo.jpeg" id="logo">
+    <h1 >DreamPrep</h1>
+   
+    </header>
+    <nav>
+        <h1  id="student_name"></h1>
+        
+
+        
+<div class="dropdown">
+    <button onclick="myFunction()" class="dropbtn" ><i class="fa-solid fa-list"></i></button>
+    <div id="myDropdown" class="dropdown-content" style="margin-left: 33%;">
+      <a href="./login_page.html">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+    </nav>
+     
+
+
+      </div>
+
+      <h2 style="font-family: serif; margin-top: 2%; margin-left: 32%; color: rgb(243, 235, 235);">Select your course according to your dream or need.</h2>
+     <h3> <label style="font-family: serif">Choose your prepration</label>
+     <select name="Courses" id="Courses">
+      <option value="#">Select your course</option>
+       <option id="Class 9th">Class 9th</option>
+       <option id="Class 10th">Class 10th</option>
+       <option id="Class 11th">Class 11th</option>
+       <option id="Class 12th">Class 12th</option>
+       <option id="UPSC">UPSC</option>
+       <option id="UPPCS">UPPSC</option>
+       <option id="IIT JEE">IIT JEE</option>
+       <option id="Gate">Gate</option>
+       <option id="SSC">SSC</option>
+       <option id="Banking">Banking</option>
+       <option id="Railways">Railways</option>
+       <option id="NEET">NEET</option>
+     </select> </h3>
+
+     
+     
+   </div>
+
+   
+    <h2 style="font-family: serif; margin-top: 2%; margin-left: 35%; color: white;">Select how much time you have to study.</h2>
+    <div id="Display">
+    <h3> <label style="font-family: serif">Choose your prepration Time</label>
+      
+    <select name="Time" id="Time">
+      <option value="#">Choose time prefernce</option>
+      <option id="2 hour">2 hour</option>
+      <option id="3 hour">3 hour</option>
+      <option id="4 hour">4 hour</option>
+      <option id="5 hour">5 hour</option>
+      <option id="6 hour">6 hour</option>
+      <option id="7 hour">7 hour</option>
+      <option id="8 hour">8 hour</option>
+    </select> </h3>
+    </div>
+
+    <div id="Submit">
+      <button onclick="Submit()">  Submit  </button>
+    </div>
+
+    <div id="image">
+
+    <div class="timesheduling">
+      <h2>Time Sheduling</h2>
+      <img src="./images (5).jpg" alt="" srcset=""><br>
+      <h2> Daily Practice</h2>
+      <img src="./images (6).jpeg" alt="">
+      <h2> Prepare for Competition</h2>
+      <img src="./competition.png" alt="">
+    </div>
+    <article>
+      
+    </article>
+    <div class="prepration">
+      <h2>Prepration for Examination</h2>
+      <img src="prep.jpg" alt="" srcset="">
+      <br>
+      <h2> Provide Notes & References</h2>
+      <img src="./images (7).jpeg" alt="">
+      <h2> Yotube Support </h2>
+      <img src="./YouTube-new-logo.jpg" alt="">
+
+    </div>
+
+    </div>
+    
+  
+
+            <!-- Add your content here -->
+        </section> 
+    <footer>
+        <p>&copy; 2024 DreamPrep. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+<script>
+    document.getElementById("student_name").innerText = localStorage.getItem("USER") + "'s Dashboard";
+</script>
+<script src="script_common.js"></script>

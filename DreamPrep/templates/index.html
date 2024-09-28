@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+</head>
+<body>
+    
+    <div class="container">
+    <img src="/static/logo-removebg-preview.png" alt="logo">
+
+    <h1>DreamPrep</h1>
+    <h3>Your Prepration, Our Responsibility</h3>
+    
+     <div id="Login-button">
+        <form action="/login">
+
+            <button type="submit" name="login" value="login">Login</button>
+            </form>
+            <form action="/Signup">
+        <button type="submit" name="SignUp" value="SignUp">SignUp</button>
+        </form>
+     </div>
+    </div>
+
+
+    <style>
+
+        .container{
+            width: 100%;
+            max-width: 640px;
+            padding: 50px 50px 50px;
+            height: 300px;
+            margin: auto;
+            margin-top: 100px;
+            border-radius: 20px;
+            background:rgba(255, 255, 255, 0.6);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        #Login-button{
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        img{
+            height: auto;
+            width: 150px;
+            margin: 0px;
+          
+        }
+        body{
+            background: url('/static/back.jpg') no-repeat;
+            background-position: center;
+            background-size: cover;
+            min-height: 100vh;
+            width: 100%;
+           
+        }
+        button{
+           margin: 0px 35px;
+            width: 90px;
+            height: 40px;
+            border: none;
+            border-radius: 10px;
+            color: white;
+            color: #000;
+            background: lightblue;
+           
+            border-radius: 5px;
+            outline: none;
+            border: none;
+            font-size: 17px;
+            cursor: pointer;
+            box-shadow: 2px 2px 10px black;
+            transition: all 0.3s;
+        }
+
+        button:hover{
+            background: transparent;
+            color: black;
+            border: 2px solid black;
+            box-shadow: none;
+        }
+
+        h1{
+            color: black;
+            text-align: center;
+        }
+        h3{
+            color: black;
+            text-align: center;
+        }
+   
+
+    </style>
+</body>
+<script src="script_common.js"></script>
+</html>

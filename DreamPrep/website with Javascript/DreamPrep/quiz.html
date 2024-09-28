@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Multiple Choice Quiz</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+#quiz-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.question {
+    margin-bottom: 20px;
+}
+
+.answers {
+    list-style-type: none;
+    padding: 0;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    margin-right: 5px;
+    display: none; /* Hide the actual radio buttons */
+}
+
+.custom-radio {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #007bff;
+    border-radius: 50%;
+    position: relative;
+}
+
+.selected .custom-radio {
+    background-color: green; /* Change background color for selected option */
+}
+
+.selected.incorrect .custom-radio {
+    background-color: red; /* Change background color for selected incorrect option */
+}
+
+#submit-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#result {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+</style>
+</head>
+<body>
+
+<h1>Multiple Choice Quiz</h1>
+
+<div id="quiz-container">
+    <div class="question">
+        <p>1. What is the capital of France?</p>
+        <ul class="answers">
+            <li class="option"><label><input type="radio" name="q1" value="a"><span class="custom-radio"></span> Paris</label></li>
+            <li class="option"><label><input type="radio" name="q1" value="b"><span class="custom-radio"></span> London</label></li>
+            <li class="option"><label><input type="radio" name="q1" value="c"><span class="custom-radio"></span> Rome</label></li>
+            <li class="option"><label><input type="radio" name="q1" value="d"><span class="custom-radio"></span> Berlin</label></li>
+        </ul>
+    </div>
+    
+    <div class="question">
+        <p>2. What is 2 + 2?</p>
+        <ul class="answers">
+            <li class="option"><label><input type="radio" name="q2" value="a"><span class="custom-radio"></span> 3</label></li>
+            <li class="option"><label><input type="radio" name="q2" value="b"><span class="custom-radio"></span> 4</label></li>
+            <li class="option"><label><input type="radio" name="q2" value="c"><span class="custom-radio"></span> 5</label></li>
+            <li class="option"><label><input type="radio" name="q2" value="d"><span class="custom-radio"></span> 6</label></li>
+        </ul>
+    </div>
+    
+    <!-- Add more questions here -->
+    
+    <button id="submit-btn">Submit</button>
+    <div id="result"></div>
+</div>
+
+<script>
+document.getElementById("submit-btn").addEventListener("click", function() {
+    var questions = document.querySelectorAll('.question');
+
+    questions.forEach(function(question) {
+        var radio = question.querySelector('input[type="radio"]:checked');
+        var customRadio = question.querySelector('.custom-radio');
+
+        if (radio) {
+            customRadio.classList.add("selected");
+
+            if (radio.value === "a") {
+                customRadio.style.backgroundColor = "green";
+            } else {
+                customRadio.style.backgroundColor = "red";
+            }
+        }
+    });
+
+    var correctAnswers = document.querySelectorAll('.custom-radio.selected.green').length;
+    var totalQuestions = questions.length;
+    var score = correctAnswers / totalQuestions * 100;
+
+    var resultDiv = document.getElementById("result");
+    resultDiv.textContent = "You scored " + score + "%";
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+   
+
+    <!--google icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <div class="container">
+        <div class="form-box">
+            <form action="/Signup" method="POST">
+                <h2>SIGN UP NOW !!</h2>
+                <p id="result"></p>
+                <div class="inputbox">
+                    <span class="material-symbols-outlined"> person</span>
+                    <input type="text" placeholder="Enter Username" name="Sname" required>
+                </div>
+                <div class="inputbox">
+                    <span class="material-symbols-outlined"> mail</span>
+                    <input type="email" placeholder="Enter Email" name="email">
+                </div>
+                <div class="inputbox">
+                    <span class="material-symbols-outlined">
+                        phone_in_talk
+                        </span>
+                    <input type="tel" placeholder="Enter Mobile No." name="mobile_number">
+                </div>
+
+                <div class="inputbox">
+                    <input  id="Date of birth" type="date" placeholder="DD/MM/YYYY" name="dob"required style="padding:0px">
+                </div>
+                <div class="inputbox">
+                    <span class="material-symbols-outlined">lock_open</span>
+                    <input type="password" placeholder="Enter Password" name="password" id="password">
+                    <input type="checkbox" onclick="pFunction()" id="show"><p>Show</p>
+                </div>
+                <div class="inputbox">
+                    <span class="material-symbols-outlined">lock</span>
+                    <input type="password" placeholder="Confirm Password"  name="confirm_password" required id="confirm_password">
+                    <input type="checkbox" onclick="cFunction()" id="show"><p>Show</p>
+                </div>
+                <div class="button">
+                    <button class="btn" id="Register-btn" type="submit"> SignUp</button>
+                </div>
+                <div class="group">
+                    <span><a href="#">Forget password ?</a></span>
+                    <span><a href="/templates/login_page.html">Login</a></span>
+                </div>
+            </form>
+        </div>
+        <div class="popup" id="popup">
+            <span class="material-symbols-outlined">verified</span>
+            <h2>Successfully Registered</h2>
+            <p>THANK YOU</p>
+            <a href="login.html"><button onclick="closeSlide()">DONE <span class="material-symbols-outlined">thumb_up</span></button></a>
+        </div>
+    </div>
+
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Playfair Display", serif;
+    }
+    
+    body{
+        background: url('/static/back.jpg') no-repeat;
+        background-position: center;
+        background-size: cover;
+        min-height: 100vh;
+        width: 100%;
+    }
+    
+    .container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+    }
+    
+    
+    .form-box{
+        position: relative;
+        width: 400px;
+        height: 700px;
+        border: 2px solid black;
+        border-radius: 20px;
+        backdrop-filter: blur(15px);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    
+    .form-box h2{
+        color: #000;
+        text-align: center;
+        font-size: 30px;
+    }
+    
+    
+    .form-box .inputbox{
+        position: relative;
+        margin: 30px 0;
+        width: 310px;
+        border-bottom: 2px solid black;
+        display: flex;
+        align-items: center;
+    }
+    
+    .form-box select{
+        width: 70%;
+        height: 45px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        padding: 0 20px 0 5px;
+        color: #000;
+        font-size: 16px;
+    }
+    
+    
+    .form-box .inputbox input{
+        width: 100%;
+        height: 45px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        padding: 0 20px 0 5px;
+        color: #000;
+        font-size: 17px;
+    }
+    
+    input::placeholder{
+        color: #000;
+    }
+    
+    .btn{
+        color: #000;
+        background: lightblue;
+        width: 100%;
+        height: 50px;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        font-size: 17px;
+        cursor: pointer;
+        box-shadow: 2px 2px 10px black;
+        transition: all 0.3s;
+    }
+    
+    .btn:hover {
+        background: transparent;
+        color: black;
+        border: 2px solid black;
+        box-shadow: none;
+      }
+    
+    .group{
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .group span a{
+        color: #000;
+        position: relative;
+        top: 10px;
+        text-decoration: none;
+        font-weight: 500;
+    }
+    
+    
+    .group a:hover{
+        text-decoration: underline;
+    }
+    
+    .inputbox span{
+        position: absolute;
+        columns: #000;
+        top: 13px;
+        right: 0;
+    }
+    
+    
+    #result{
+        color: rgb(220, 4, 4);
+        font-weight: 600;
+        position: relative;
+        top: 25px;
+    }
+    
+    
+    
+    .popup{
+        width: 400px;
+        background-color: rgb(115, 238, 215);
+        border-radius: 20px;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translate(-50%,-50%) scale(0);
+        transition: transform 0.4s , top 0.4s;
+        visibility: hidden;
+        text-align: center;
+        padding: 0 30px 30px;
+        height: 350px;
+        color: #000;
+    }
+    
+    .popup span{
+        font-size: 40px;
+        margin-top: 15px;
+    }
+    
+    .popup a span{
+        color: rgba(5, 8, 159, 0.74);
+        font-size: 25px;
+        margin-top: 0;
+        margin-left: 5px;
+    }
+    
+    .popup p{
+        margin-top: 15px;
+    }
+    .popup button{
+        width: 100%;
+        background: rgb(12, 240, 54);
+        padding: 10px 0;
+        margin-top: 30px;
+        border: 2px solid black;
+        font-size: 20px;
+        color: #000;
+        border-radius: 5px;
+        cursor: pointer;
+        box-shadow: 2px 2px 10px black;
+        transition: all 0.3s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .popup button:hover {
+        background: transparent;
+        color: black;
+        border: 2px solid black;
+        box-shadow: none;
+    }
+    
+    .popup a{
+        color: #000;
+        text-decoration: none;
+        font-weight: 600;
+        letter-spacing: 2px;
+    }
+    
+    .open-slide{
+        top: 50%;
+        transform: translate(-50%, -50%) scale(1);
+        visibility: visible;
+    }
+    
+    #show{
+        width: 20px;
+        height: 25px;
+       margin-right: 5px;
+       accent-color: #000;
+    }
+    
+    p{
+        font-size: 16px;
+        margin-right:30px;
+    }
+    
+    
+    .popup h2{
+        font-weight: 500;
+        font-size: 40px;
+        margin: 30px 0 10px;
+    }
+</style>
+
+<script>
+    
+    function pFunction() {
+        let x = document.getElementById("password");
+        if (x.type === "password") {
+          x.type = "text";
+        } else {
+          x.type = "password";
+        }
+      }
+    
+    
+    function cFunction() {
+        let y = document.getElementById("cpassword");
+        if (y.type === "password") {
+          y.type = "text";
+        } else {
+          y.type = "password";
+        }
+      }
+    
+    
+    
+    let popup = document.getElementById("popup");
+    
+    function validation() {
+        if(document.Formfill.Username.value==""){
+            document.getElementById("result").innerHTML="Enter Username*";
+            return false;
+        }
+        else if(document.Formfill.Username.value.length<5){
+            document.getElementById("result").innerHTML="Use Atleast 5 characters*";
+            return false;
+        }
+        else if(document.Formfill.Email.value==""){
+            document.getElementById("result").innerHTML="Enter Your Email*";
+            return false;
+        }
+        else if(document.Formfill.mobile.value==""){
+            document.getElementById("result").innerHTML="Enter Your Mobile No.*";
+            return false;
+        }
+        
+        else if(document.Formfill.gender.value=="select"){
+            document.getElementById("result").innerHTML="Select Gender*";
+            return false;
+        }
+        else if(document.Formfill.password.value==""){
+            document.getElementById("result").innerHTML="Set Your Password*";
+            return false;
+        }
+        else if(document.Formfill.password.value.length<6){
+            document.getElementById("result").innerHTML="Password must be 6 digits or character*";
+            return false;
+        }
+        else if(document.Formfill.cpassword.value==""){
+            document.getElementById("result").innerHTML="Confirm Password*";
+            return false;
+        }
+        else if(document.Formfill.cpassword.value!=document.Formfill.password.value){
+            document.getElementById("result").innerHTML="Enter the Same Password*";
+            return false;
+        }
+    
+        else if(document.Formfill.password.value==document.Formfill.cpassword.value){
+            popup.classList.add("open-slide")
+            return false;
+        }
+    
+    }
+    
+    function closeSlide(){
+      popup.classList.remove("open-slide");
+    }
+    
+</script>
+
+<script src="script_common.js"></script>
+
+</body>
+</html>
+</body>
+</html>

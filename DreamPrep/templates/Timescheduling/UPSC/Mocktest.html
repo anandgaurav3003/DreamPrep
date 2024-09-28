@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media</title>
+    <script src="kithttps://.fontawesome.com/e9a961e9a6.js" crossorigin="anonymous"></script>
+
+    
+<style>
+*{
+   font-family: serif;
+            margin: 0px;
+            padding: 0px;
+        }
+        #Questions{
+        font-size: 18px;
+        margin-left: 5%;
+        color: rgb(248, 245, 248);
+        font-family: serif;
+    }
+        body{
+          background-image: url(/static/27269\ \(1\).jpg);
+          background-size:cover;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+         
+        }
+        header {
+            background-color: rgb(8, 8, 8);
+            color: #fff;
+            justify-content: space-between;
+            display: flex;
+        }
+        nav {
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: space-between;
+           
+        }
+       nav h1{
+        margin-left: 20px;
+        margin-top: 12px;
+        font-size: 22px;
+           font-family:'Times New Roman', Times, serif;
+
+       }
+       #dropdown-list{
+        font-size: 22px;
+        margin-right: 10px;
+       }
+        section {
+            padding: 10px;
+            text-align: left;
+        }
+        footer {
+            background-color: #3b0447;
+            color: #fff;
+            padding: 1px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+       
+        #logo{
+            justify-content: left;
+            border-color: blue;
+            width: 100px;
+            height: 75px;
+            border: none;
+
+        }
+
+        header h1{
+            margin-top: 15px;
+            margin-right: 45%;
+            font-family: "BhuTuka Expanded One", serif;
+            font-weight: 400;
+            font-style: normal;
+}
+
+.show {display: block;}
+
+h2{
+  margin-left: 40%;
+  margin-top: 2%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(202, 81, 162);
+}
+
+#Display{
+  margin-left: 0%;
+}
+
+#Submit{
+            display: flex;
+            justify-content: center;
+            margin-top: 2%;
+            border-radius: 10px;
+        }
+#Time{
+            font-family: serif;
+            font-size: 20px;
+            margin-left: 32%;
+        }
+table{
+  font-family: serif;
+  margin-left: 30%;
+  width:40%;
+  height: 40%;
+  color: #0c030b;
+
+ 
+}
+td{
+  text-align: center;
+ 
+}
+* {box-sizing: border-box}
+body {font-family: "Lato", sans-serif;}
+
+/* Style the tab */
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 30%;
+  height: 300px;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: #ddd;
+}
+
+/* Create an active/current "tab button" class */
+.tab button.active {
+  background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: 300px;
+}
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  transition: 0.4s;
+}
+
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+.panel {
+  padding: 0 18px;
+  display: none;
+  background-color: white;
+  overflow: hidden;
+}
+#TITLE{
+    color: white;
+    font-family: serif;
+    margin-left: 44%;
+    font-size: 28px;
+}
+
+#Total{
+  margin-left: 90%;
+  
+  color: white;
+  position: fixed;
+}
+</style>
+</head>
+<body>
+
+    <header>
+    <img src="../static/Logo.jpeg" id="logo">
+    <h1 >DreamPrep</h1>
+   
+    </header>
+    <nav>
+        <h1  id="student_name"> {{name}} 's Dashboard</h1>
+    </nav>
+      </div>
+        <h1 style="margin-left: 45%; font-family: serif; color: white;">UPSC</h1>
+        <h2 id="TITLE" >Mock Test</h2>
+
+        <form id="testForm" action="#" method="post">
+             <h3 id="Total">Total marks: 100</h3><br>
+
+             
+             <div id="Questions">
+             <p style="font-family: serif;"><b>Q1. In the context of the Mauryan rule, consider the following statment:</b><br>
+             <b>(1) The Mauryan Bureaucracy was not as elaborate as that of the Nandas</b><br>
+             <b>(2) Slaaves were mosly employed in agriculture operations.</b><br>
+             <b>(3) Mauryan pillars were made of a single piece of sandstone.</b><br>
+             <b>(4) Adhyakshas were appointed to regulate economic activities.</b><br></p>
+            <p> Which of the statement given below are correct?</p>
+             <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1">(a) 1,2 and 3 only</label><br>
+             <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2">(b) 2 and 3 only</label><br>
+             <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 2,3 and 4 only</label><br>
+             <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4">(d) All of the above.</label><br>
+            <br>
+           
+                 <p><b>Q2. With reference to the temple architecture in the northern hills of india, which of the following statements are correct?</b></p>
+                 <p><b>Gandhara and Gupta influence can be seen in the temple of the kashmir region.</b></p>
+                 <p><b>The temples of the hills had their own tradition of wooden buildings with pitched roofs.</b></p>
+                 <p><b>Images of Manishasuramardhini and Narsimha are found at the Laksna-Devi Mandir.</b></p>
+                 <
+                 <p>Which of the statement given below are correct?</p>
+                 <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1">(a) 1 and 2 only</label><br>
+                 <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2">(b) 2 and 3 only  </label><br>
+                 <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 1 and 3 only </label><br>
+                 <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) 1, 2 and 3 </label><br>
+                <br>
+                 <p><b>Q3. With references to the Vijaynagra empire, Consider the following pairs: </b></p>
+                 <p><b>Sthalas  -  A platform of Vigayanagra temples</b></p>
+                 <p><b>Palaiyagar - Governor of the province</b></p>
+                 <p><b>Kuruvai - Village Officials</b></p>
+                 <p>Which of the pair Given below are correctly matched?</p>
+                 <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1">(a) 1 only  </label><br>
+                 <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2">(b) 1 and 2 only  </label><br>
+                 <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only  </label><br>
+                 <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4">(d) None </label><br>
+                <br>
+                 <p><b>Q4. Which among the following is an incorrect statement with references to the bhakti movement in India?</b></p>
+                 <p><b> basavanan promoted the post-puberty marriage and the remarriage of widows.</b></p>
+                 <p><b> Dadupanthis composed the Kabir Granthvali to spread the teachings of the Kabir.</p></b>
+                 <p><b>Guru Nanak set up rules for congregational worship that involved collective recitation.</b></p>
+                 <p><b> Chaitanya Mahaprabhu rejected the practise of idol worship.</b></p>
+               
+                 <p>Which of the statement given below are correct?</p>
+                 <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                 <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                 <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                 <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+                <br>
+               
+                <p><b>Q5.In which type of government, government has to explain its actions and defend its decisions to the people?</b></p>
+                  <p><b> [A] Democratic</b></p>
+                    <p><b> [B] Monarchic</b></p>
+                      <p><b> [C] Aristocratic</b></p>
+                        <p><b> [D] Autocratic</b></p>
+               
+                          <p>Which of the statement given below are correct?</p>
+                <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+               <br>
+               
+               
+               <p><b>  Q6.The Parliament and the Constitution are the instruments of__:</b></p>
+                <p><b>  [A] Legal Justice</b></p>
+                  <p><b>  [B] Political Justice</b></p>
+                    <p><b> [C] Economic Justice</b></p>
+                      <p><b>  [D] Social Justice</b></p>
+               
+                <p>Which of the statement given below are correct?</p>
+                <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+               <br>
+               
+               <p><b>    Q7.Which type of emergency has been imposed only one time in India so far ?</b></p>
+                <p><b>    [A] Internal Emergency</b></p>
+                  <p><b>   [B] State Emergency</b></p>
+                    <p><b>  [C] External Emergency</b></p>
+                      <p><b>  [D] Financial Emergency</b></p>
+               
+                <p>Which of the statement given below are correct?</p>
+                <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+               <br>
+               
+               <p><b> Q8.In whose consultation does the President convene and prorogue all sessions of Parliament ?</b></p>
+               
+                <p><b> [A] The Speaker</b></p>
+                  <p><b> [B] The Prime Ministe</b></p>
+                    <p><b> [C] The Prime Minister and the leader of the Opposition in Lok </b></p>
+                      <p><b>  [D] The Council of Ministers</b></p>
+
+                <p>Which of the statement given below are correct?</p>
+                <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+               <br>
+               
+               <p><b> Q9.In a Parliamentary form of Government__:</b></p>
+                <p><b>  [A] The Legislature is responsible to the Judiciary</b></p>
+                  <p><b>  [B] The Executive is responsible to the Legislature</b></p>
+                    <p><b>  [C] The Legislature is responsible to the Executive</b></p>
+                      <p><b> [D] The Judiciary is responsible to the Legislature</b></p>
+               
+                <p>Which of the statement given below are correct?</p>
+                <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+               <br>
+               
+               <p><b> Q10.Which of the following article deals with the appointment of Prime Minister of India?</b></p>
+               
+                <p><b>  [A] Article 356</b></p>
+                  <p><b> [B] Article 32</b></p>
+                    <p><b> [C] Article 75</b></p>
+                      <p><b> [D] Article 348</b></p>
+               
+                <p>Which of the statement given below are correct?</p>
+                <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+               <br>
+
+               <p><b> Q11.Who presides over the joint sitting of the Lok Sabha and the Rajya Sabha?</b></p>
+                <p><b> [A] Speaker of Lok Sabha</b></p>
+                  <p><b> [B] Deputy Speaker of Lok Sabh</b></p>
+                    <p><b> [C] Prime Minister</b></p>
+                      <p><b> [D] Vice President</b></p>
+               
+                <p>Which of the statement given below are correct?</p>
+                 <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                 <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                 <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                 <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+                <br>
+                 <p><b>Q12. which of the following pairs are correctly matched in the context of sangam age? </b></p>
+                 <p><b>Term                  Description</b></p>
+                 <p><b>Uzhavar               Head of a military unit</b></p>
+                 <p><b>Adimai                A ruling class</b></p>
+                 <p><b>Vellalar              Large landowners</b></p>
+                 
+                 <p>Which of the statement given below are correct?</p>
+                 <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                 <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                 <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                 <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+                <br>
+                 <p><b>Q13. With reference to science and technology in ancient india, consider thefolowing statement: </b></p>
+                 <p><b>potter's wheel was first used by the people of indus valley civilisation.</b></p>
+                 <p><b>the lost wax technique was fisrt used during thr mauryan period.</b></p>
+                 
+                 <p>Which of the statement given below are correct?</p>
+                 <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                 <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                 <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c)Both </label><br>
+                 <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+               
+                 <br>
+                 <p><b>Q14which of the following statements are correct regarding the amara-nayaka system of the vijayanagara empire? </b></p>
+                 <p><b>Amara-Nayakas were non-military officials at the Village level.</b></p>
+                 <p><b>The system was influenced by thr iqta system of the delhi sultanate.</b></p>
+                 <p><b>king exercised administrative power over amara-nayakas</b></p>
+               
+                 <p>Which of the statement given below are correct?</p>
+                 <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                 <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                 <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                 <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+                <br>
+                 <p><b>Q15.with reference to forced labolur (vishti) in india during the gupta period.</b></p>
+                 <p><b>It was considered a source of incomee for the state, a sort of takes paid by the people.</b></p>
+                 <p><b>It was totally a absent in the Madhya Pradesh and Kathiawar regions of the Gupta empire</b></p>
+                 <p><b> The forced labourer was entitled to weekly wages.</b></p>
+                 <p><b>The eldest son of the labourer was sent as the forced labourer.</b></p>
+                 <p>Which of the statement given below are correct?</p>
+                 <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                 <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                 <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                 <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+                <br>
+                 <p><b>Q16.Which of the following statements are correct regarding the social conditions during the 17th century? </b></p>
+                 <p><b>womens were not allowed to engage in any type of economic activity.</b></p>
+                 <p><b>Marriage required compulsory payment of dowry to the groom's family.</b></p>
+                 <p><b>Some women enjoyed the right to inherit property.</b></p>
+ 
+                 <p>Which of the statement given below are correct?</p>
+                 <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                 <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                 <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                 <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+                <br>
+                <p><b>Q17.With the reference to ancient Indian history consider the following statements: </b></p>
+                <p><b>while the Indus valley civilization is known for their towns and citadels, Mesopotamia is famous for its religious temples and art.</b></p>
+                <p><b>While the Indus valley civilization imported cotton goods from Mesopotamia later Mesopotamia,later imported gold from indys valley.</b></p>
+               
+                <p>Which of the statement given below are correct?</p>
+                 <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                 <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                 <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                 <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+                <br>
+                <p><b>Q18.With reference to nathpanthis,sidshas and yogis in medieval India.</b></p>
+                <p><b>They neither criticize nor supported conventional religion and the social order.</b></p>
+                <p><b>They supported the renunciation of the world through meditation.</b></p>
+                <p><b>They rejected yogasanas for attaining salvation</b></p>
+                <p><b>it become popular among the brahminical class due to extreme ritual practices.</b></p>
+                <p>Which of the statement given below are correct?</p>
+                 <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                 <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                 <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                 <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+                <br>
+               <p><b>Q19.With reference to stupas of ancient India consider the following statement :</b></p>
+               <p><b>The practice of constructing is to parse was prevalent during the Vedic period.</b></p>
+               <p><b>The stupas were built in relation to both Buddhist and Jain religions.</b></p>
+               <p><b>The shunga dynasty introduced the idea of 'toranas' to the stupas.</b></p>
+               <p><b></b></p>
+               <p>Which of the statement given below are correct?</p>
+                 <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                 <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                 <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                 <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+                <br>
+              <p><b>Q20.In the context of history of India, consider the following pairs: </b></p>
+              <p><b>Term                        Description</b></p>
+              <p><b>Eripatti                  Revenue from this land was set apart for the maintenance of the village tank</b></p>
+              <p><b>Taniyurs                   Villages dominated to a single brahmin or a group of brahmins</b></p>
+              <p><b>ghatikas                  Colleges generally attached to the temples</b></p>
+             
+              <p>Which of the statement given below are correct?</p>
+                 <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                 <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                 <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                 <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+                <br>
+
+                <p><b>Q21.With the reference to the sangam age, which of the following statements is/are correct?</p></b>
+                <p><b>puhar was a great centre of trade for pandyan</p></b>
+                <p><b>kavuriyar's Title was assumed by the pandyan kings and the 'vallavan' of one title was assumed by the chola kings.</p></b>
+                <p><b>The chola Kingdom was situated between the pennar and the vilar rivers</p></b>
+                <p><b>The major rock Edict II Asoka mentions of the three Kingdom -  pandyas, cholas and cheras as neighbors.</p></b>
+                <p>Which of the statement given below are correct?</p>
+                 <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                 <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                 <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                 <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+                <br>
+                <p><b>Q22.It's an urban site identified as one of the centres of civilization. It has common you teach common settlements with mud brick walls and is located on the right Bank of now dried up palaeo-channel of drishadvati.It is by far one of the largest harappan site in modern day India.</p></b>
+                <p><b>Which of the following is being described in the above passage?</p></b>
+                <p><b>Mohenjo-daro</p></b>
+                <p><b>Rakhigarhi</p></b>
+                <p><b>Dholavira</p></b>
+                <p><b>Ganweriwala</p></b>
+                <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                 <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                 <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                 <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+                <br>
+                <p><b>Q23. The Sarkaria commission is related to which of the following? </p></b>
+                <p><b>[A] Centre and State Relations</p></b>
+                <p><b>[B] Banking and Financial Sector</p></b>
+                <p><b>[C] Elections Reforms
+                </p>[D] Freedom of Press In India</b>
+             
+                <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                 <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                 <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                 <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+                <br>
+                <p><b>Q24.“India, that is Bharat, shall be a Union of States”.
+                  The above mandate has been enshrined in the Constitution of India, in which among the following? </p></b>
+                <p><b>[A] Preamble</p></b>
+                <p><b>[B] Article 1</p></b>
+                <p><b>[C] Artivle 2   </p></b>
+                <p><b> [D] Schedule 1  </p></b>
+                <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                 <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                 <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                 <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+                <br>
+                <p><b>Q25.Which among the following is not true about the Notified Area Committee ?</p></b>
+                <p><b>[A] It is an area which does not necessarily fulfill all the conditions for the constitution of the municipality</p></b>
+                <p><b>[B] It is created in an area which is fast developing and where new industries are set up</p></b>
+                <p><b>[C] All the members are appointed by the state government</p></b>
+                <p><b>[D] Notified Area Committee is constituted by an act of legislatures</p></b>
+             
+                <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                 <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                 <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                 <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+                <br>
+                <p><b>Q26.Which among the following articles of Constitution of India abolishes the untouchablity?</p></b>
+                <p><b>[A] Article 15 </p></b>
+                <p><b>[B] Article 16  </p></b>
+                <p><b>[C] Article 17  </p></b>
+                <p><b[D] Article 18  ></p></b>
+                <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                 <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                 <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                 <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+                <br>
+                <p><b>Q27.Pyithu Hluttaw is the lower house of the parliament of which among the following countries?</p></b>
+                <p><b>[A] Myanmar
+                </p></b>
+                <p><b>[B] Thailand
+                </p></b>
+                <p><b>[C] Cambodia
+                </p></b>
+                <p><b>[D] Vietnam   </p></b>
+                <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                 <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                 <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                 <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+                <br>
+                <p><b> Q28. What is the maximum permissible time gap between two sessions of parliament ?
+               <p><b>[A] 3 months </p></b>
+                <p><b> [B] 6 months </p></b>
+                  <p><b>[C] 9 months </p></b>
+                    <p><b>[D] 12 months<p><b>
+                    <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                    <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                    <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                    <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+                   <br>
+                   <p><b>Q29.When I respect the ideals and institutions of our constitution and respect national flag and national anthem perform which of the following?<p><b>
+                    <p><b> [A] Exercise my right to freedom</p></b>
+                      <p><b> [B] Exercise my cultural and educational rights</p></b>
+                        <p><b>[C] Exercise my right to constitutional remedie</p></b>
+                          <p><b>  [D] perform my fundamental duties</p></b>
+                            <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                            <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                            <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                            <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+                           <br>
+                           <p><b>Q30.Who among the following presidents of India was the first Chief Minister of Modern states in India?</p></b>
+                            <p><b> [A] Dr. Shankar Dayal Sharma</p></b>
+                              <p><b>  [B] Neelam Sanjeeva Reddy</p></b>
+                                <p><b>  [C] Dr. Rajendra Prasad</p></b>
+                                  <p><b>  [D] Dr. BD Jatti</p></b>
+                                  <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                            <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                            <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                            <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+                           <br>
+                           <p><b>  Q31. Which of the present ministry of Government of India was formerly Ministry of Welfare ?</p></b>
+                            <p><b>       [A] Ministry of Health and Family Welfare</p></b>
+                              <p><b>       [B] Ministry of Social Justice and Empowerment</p></b>
+                                <p><b>      [C] Ministry of Consumer Affairs, Food and Public Distribution</p></b>
+                                  <p><b>     [D] Ministry of Labor and Employment</p></b>
+                                  <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                                  <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                                  <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                                  <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+                                 <br>
+                                 <p><b>    Q32.Which among the following is a correct statement regarding powers of President of India:</p></b>
+                                  <p><b>   [A] the military powers of the president is subordinate to executive powers</p></b>
+                                    <p><b>   [B] the executive powers of the president is subordinate to military powers</p></b>
+                                      <p><b>   [C] the military powers and executive powers are insubordinate with regard to each other</p></b>
+                                        <p><b>  [D] the executive powers are subordinate to diplomatic powers</p></b>
+                                        <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                                        <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                                        <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                                        <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+                                       <br>
+                                       <p><b>  Q33.Which among the following articles of Constitution of India gives the power to the Highcourts to issue writs?</p></b>
+                                        <p><b>   [A] 222</p></b>
+                                          <p><b>   [B] 224</p></b>
+                                            <p><b>   [C] 226</p></b>
+                                              <p><b>   [D] 228</p></b>
+                                              <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                                              <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                                              <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                                              <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+                                             <br>
+                                             <p><b>  Q33.In which among the following states, Government had identified maximum number of Ecologically Sensitive Zones under the Environment (Protection) Act, 1986?</p></b>
+                                              <p><b> [A] Maharatsra</p></b>
+                                                <p><b>    [B] Andhra Pradesh</p></b>
+                                                  <p><b>   [C] Tamil nadu</p></b>
+                                                    <p><b>   [D] Karanataka</p></b>
+                                             <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                                              <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                                              <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                                              <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+                                             <br>
+                                             <p><b>  Q34.Which of the following must be approved by the Public Accounts Committee before being submitted to the Lok Sabha for voting?</p></b>
+                                             <p><b>   [A] Supplementary grant</p></b>
+                                              <p><b>  [B] Exceptional grant</p></b>
+                                                <p><b>  [C] Token grant</p></b>
+                                                  <p><b>   [D] Excess grant</p></b>
+                                             <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                                              <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                                              <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                                              <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+                                             <br>
+                                             <p><b>   Q35.In which of the following years Panchayati Raj System was introduced?</p></b>
+                                             <p><b>   [A] 1948</p></b>
+                                              <p><b>   [B] 1959</p></b>
+                                                <p><b> [C] 1951</p></b>
+                                                 <p><b>       [D] 1952</p></b>
+                                             <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                                              <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                                              <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                                              <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+                                             <br>
+                                             <p><b>    Q36.On which date Constitution of India was adopted and enacted by the Constituent Assembly?</p></b>
+                                              <p><b>  [A] 15th August, 1947</p></b>
+                                                <p><b>     [B] 26th January, </p></b>
+                                                  <p><b>       [C] 26th November, 1949</p></b>
+                                                    <p><b>    [D] 30th January, 1948</p></b>
+                                             <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                                              <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                                              <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                                              <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+                                             <br>
+                                             <p><b>   Q37.Which of the following has the provision to uphold and protect the sovereignty, unity and integrity of India?</p></b>
+                                              <p><b>   [A] Directive Principles of State Policy</p></b>
+                                                <p><b>  [B] Preamble to the Constitution</p></b>
+                                                  <p><b>   [C] Fundamental Duties</p></b>
+                                                    <p><b>    [D] Fundamental Rights</p></b>
+                                             <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                                             <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                                             <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                                             <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+                                            <br>
+                                            <p><b>     Q38.Which of the following is a feature of a Parliamentary System of Government?</p></b>
+                                              <p><b>      [A] The parliament is responsible to the executive</p></b>
+                                                <p><b>      [B] The parliament is responsible to the judiciary</p></b>
+                                                  <p><b>     [C] The executive is responsible to the parliament</p></b>
+                                                    <p><b>     [D] The judiciary is responsible to the parliament</p></b>
+                                             <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                                             <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                                             <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                                             <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+                                            <br>
+                                            <p><b>     Q39.The concept of Fundamental Duties in the Indian Constitution has been borrowed from?</p></b>
+                                              <p><b>    [A] British Constitution</p></b>
+                                                <p><b>    [B] French Constitution</p></b>
+                                                  <p><b>    [C] Canadian Constitution</p></b>
+                                                    <p><b>    [D] Russian Constitution</p></b>
+                                             <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                                             <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                                             <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                                             <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+                                            <br>
+                                            <p><b>      Q40.Which of the following statements is / are correct regarding the concept of equality and liberty enshrined in the Preamble of the Constitution of India?</p></b>
+                                              <p><b>      Without equality, liberty would produce the supremacy of the few over many</p></b>
+                                             <p><b>      Equality without liberty promotes individual initiative</p></b>
+                                              <p><b>      Select the correct option from the codes given below:</p></b>
+                                             
+                                              <p><b>  [A] Only 1</p></b>
+                                              <p><b>  [B] Only 2</p></b>
+                                              <p><b>  [C] Both 1 & 2</p></b>
+                                              <p><b>   [D] Neither 1 nor 2</p></b>
+                                             <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                                             <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                                             <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                                             <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+                                            <br>
+                                                 <p><b>Q41.Which of the following are the unitary features of the government of India?</p></b>
+                                              <p><b>     1. Strong Centre</p></b>
+                                                <p><b>     2. No Equality of State Representation</p></b>
+                                                  <p><b>    3. Emergency Provisions</p></b>
+                                                    <p><b>    4. All-India Services</p></b>
+                                                      <p><b>    Select the correct option from the codes given below:</p></b>
+                                                      <p><b>  [A] Only 1</p></b>
+                                                      <p><b> [B] Only 1 & 3</p></b>
+                                                      <p><b> [C] Only 1, 2 & 3</p></b>
+                                                      <p><b>[D] All of the above</p></b>
+                                             <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                                             <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                                             <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                                             <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+                                            <br>
+                                     
+                                            <p><b>     Q42.Which act makes it mandatory for any association of the individuals calling itself a political party to make application to Election Commission for registration as a political party within 30 days following the date of its formation?</p></b>
+                                              <p><b>    [A] Representation of People Act, 1950</p></b>
+                                                <p><b>    [B] Representation of People Act, 1951</p></b>
+                                                  <p><b>      [C] Representation of People Act, 1952</p></b>
+                                                    <p><b>    [D] Representation of People Act, 1953</p></b>
+                                             <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                                             <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                                             <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                                             <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+                                            <br>
+                                            <p><b>Q43.Which of the following statements are correct regarding Union Public Service Commission?</p></b>
+                                            <p><b>     [A] It’s recommendations are binding in nature.</p></b>
+                                              <p><b>     [B] It’s recommendations are advisory in nature.</p></b>
+                                                <p><b>     [C] It is a non government organisation.</p></b>
+                                                  <p><b>    [D] None of the above</p></b>
+                                            <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                                             <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                                             <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                                             <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+                                            <br>
+                             
+                                           
+                                            <p><b>    Q44.Who determines the salary, allowances and other service conditions of the Chief Information Commissioner and an Information Commissioner?</p></b>
+                                              <p><b>    [A] President</p></b>
+                                                <p><b>    [B] Prime Minister</p></b>
+                                                  <p><b>    [C] Central Government</p></b>
+                                                    <p><b>    [D] None of the above</p></b>
+                                            <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                                             <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                                             <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                                             <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+                                            <br>
+                                           
+                                       
+                                           
+                                            <p><b>     Q45.Which of the following are the guiding principles of NITI Aayog?</p></b>
+                                              <p><b>      1. Antyodaya</p></b>
+                                                <p><b>      2. Exclusion</p></b>
+                                                  <p><b>      3. People’s Participation</p></b>
+                                                    <p><b>     4. Governance</p></b>
+                                                      <p><b>     Select the correct option from the codes given below</p></b>:
+                                                        <p><b>     [A] Only 1 & 2</p></b>
+                                                          <p><b>     [B] Only 2 & 3</p></b>
+                                                            <p><b>     [C] Only 1, 3 & 4</p></b>
+                                                              <p><b>     [D] 1, 2, 3 & 4</p></b>
+                                           
+                                       
+                                            <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                                             <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                                             <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                                             <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+                                            <br>
+                                            <p><b>     Q46.Where is the headquarters of Central Vigilance Commission?</p></b>
+                                              <p><b>     [A] New Delhi</p></b>
+                                                <p><b>     [B] Mumbai</p></b>
+                                                  <p><b>     [C] Lucknow</p></b>
+                                                    <p><b>  [D] Jaipur</p></b>
+                                            <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                                            <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                                            <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                                            <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+                                           <br>
+                                           
+                                           <p><b>     Q47.Which of the following have the French system of Administrative Courts?</p></b>
+                                            <p><b>   [A] Belgium</p></b>
+                                              <p><b>   [B] Greece</p></b>
+                                                <p><b>    [C] Turkey</p></b>
+                                                  <p><b>   [D] All of the above</p></b>
+                                           
+                                            <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                                            <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                                            <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                                            <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+                                           <br>
+                                           
+                                           <p><b>    Q48.Which of the following countries have Procurator System of grievance redressal?</p></b>
+                                            <p><b>    [A] Czechoslovakia</p></b></p></b>
+                                              <p><b>    [B] France</p></b>
+                                                <p><b>     [C] India</p></b>
+                                                  <p><b>     [D] All of the above</p></b>
+                                            <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                                             <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                                             <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                                             <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+                                            <br>
+                                            <p><b>     Q49.Which article of the Directive Principle of State Policy promotes the formation of Cooperative Societies?</p></b>
+                                              <p><b>     [A] 39-B</p></b>
+                                                <p><b>    [B] Article 43-B</p></b>
+                                            <p><b>     [C] Article 44</p></b>
+                                              <p><b>    [D] Article 45</p></b>
+                         
+                                            <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                                             <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                                             <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                                             <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+                                            <br>
+                                            <p><b>       Q50.Central Consumer Protection Authority is being constituted under which section of the Consumer Protection Act, 2019?</p></b>
+                                              <p><b>       [A] Section 10(1)</p></b>
+                                                <p><b>      [B] Section 10(2)</p></b>
+                                                  <p><b>      [C] Section 10(3)</p></b>
+                                                    <p><b>      [D] Section 10(4)</p></b>
+                                             
+                                                                                               
+                                            <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                                            <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                                            <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                                            <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+                                           <br>
+                                             
+                                           <p><b>    Q51.Which of the following schedules of the Constitution of India contains provisions regarding defection?</p></b>
+                                              <p><b>    [A] 9th schedule</p></b>
+                                                <p><b>     [B] 10th schedule</p></b>
+                                                  <p><b>      [C] 11th schedule</p></b>
+                                                    <p><b>      [D] 12th schedule</p></b>
+                                            <input type="checkbox" id="option1" name="question1" value="apple"> <label for="option1"> (a) 1 only </label><br>
+                                             <input type="checkbox" id="option2" name="question1" value="carrot"> <label for="option2"> (b) 1 and 2 only  </label><br>
+                                             <input type="checkbox" id="option3" name="question1" value="banana"> <label for="option3">(c) 3 only </label><br>
+                                             <input type="checkbox" id="option4" name="question1" value="potato"> <label for="option4"> (d) None </label><br>
+                                            <br>
+                                             
+                                                                         
+                                             
+                                   
+                           
+                           
+
+                   
+                   
+             <input type="submit" value="Submit" onclick="Submit()">
+         </form>
+       
+       
+        <script>
+        function openCity(evt, Basis) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(Basis).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+       
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+        </script>
+
+
+
+
+         
+    <footer>
+        <p>&copy; 2024 DreamPrep. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+<script>
+    document.getElementById("student_name").innerText = localStorage.getItem("USER") + "'s Dashboard";
+
+  function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+var acc = document.getElementsByClassName("accordion");
+var i;
+
+for (i = 0; i < acc.length; i++) {
+  acc[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var panel = this.nextElementSibling;
+    if (panel.style.display === "block") {
+      panel.style.display = "none";
+    } else {
+      panel.style.display = "block";
+    }
+  });
+}
+
+</script>
